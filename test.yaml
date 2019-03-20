@@ -1,0 +1,13 @@
+---
+ - hosts:
+        local
+   become: yes
+   tasks: 
+    - name: Add user new
+      user:
+       name: new2
+       shell: /bin/false
+    - name: adding file to /tmp
+      file:
+       name: /tmp/xyz.php
+       state: touch
